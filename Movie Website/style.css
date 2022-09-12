@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+}
+
+html{
+    height: 100%;
+} 
+
+body{
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif
+}
+
+.navbar{
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: 'Sen', sans-serif;
+}
+
+.logo-container{
+    flex: 1;
+    align-items: center;
+}
+
+.logo{
+    font-size: 30px;
+    color: rgb(34, 224, 34);
+    
+}
+
+.menu-container{
+    flex: 6;
+        
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+    
+}
+
+.menu-list-item{
+    margin-right: 30px;
+    
+}
+
+.menu-list-item.active{
+    font-weight: bold;
+}
+
+.profile-container{
+    flex: 2;   
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;
+
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover; /*Para que la imagen no se vea rara*/
+}
+
+.profile-text-container{
+    margin: 0 20px;
+}
+
+.toggle{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.toogle-icon{
+    color: goldenrod;
+}
+
+.toogle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    align-items: center;
+
+}
+
+.left-menu-icon{
+    color: white;/*podemos verlo pero hay que ordenarlo
+    vamos al sidebar div y creamos display flex -- flex column*/
+    margin: 20px 20px;
+    font-size: 20px;
+}
+
+.container{
+    background-color: #151515;
+    min-height: calc(100% - 50px);/*para que no pise el navbar*/    
+    color: white;
+
+}
+
+.content-container{
+    margin-left: 50px;
+}
+
+.feature-content{
+    height: 50vh;
+    background-color: tomato;
+    padding: 50px;
+}
+
+.featured-title{
+    width: 200px;
+}
+
+.featured-desc{
+    width: 500px;
+    color: lightgray;
+    margin: 30px 0;
+}
+
+.featured-button{
+    background-color: rgb(34, 224, 34);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+
+.movie-list-container{
+    padding: 0 20px;
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list{
+    display: flex;
+    align-items: center;
+    height: 300px;  
+    transform: translateX(0);  
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item{
+    margin-right: 20px;
+    position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.08);
+}
+
+.movie-list-item:hover .movie-list-item-tittle,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button{
+    opacity: 1;
+
+}
+
+.movie-list-item-img{
+    transition: all 0.5s ease-in-out;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.movie-list-item-tittle{
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item-desc{
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    opacity: 0;
+    width: 200px;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item-button{
+    padding: 10px;
+    background-color:rgb(34, 224, 34);
+    color: white;
+    border-radius: 10%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    opacity: 0.5;
+    right: 0%;
+    color: lightgray;
+    cursor: pointer;
+}
+
+.container.active{
+    background-color: white;
+}
+
+.movie-list-tittle.active{
+    color: black;
+}
+
+.navbar-container.active{
+    background-color: white;
+    color: black;
+}
+
+.sidebar.active{
+    background-color: white;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+.toggle.active{
+    background-color: black;
+
+}
+
+.toogle-ball.active{    
+    background-color: white;
+    transform: translateX(-20px);
+    transition: all 0.5s ease-in-out;
+}
